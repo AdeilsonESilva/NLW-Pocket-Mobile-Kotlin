@@ -1,4 +1,4 @@
-package br.com.adeilson.nearby.data.model
+package br.com.adeilson.nearby.ui.components.category
 
 import androidx.annotation.DrawableRes
 import br.com.adeilson.nearby.R
