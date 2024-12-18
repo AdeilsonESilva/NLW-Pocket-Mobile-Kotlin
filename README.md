@@ -18,3 +18,9 @@ npm start
 ## Android
 
 Android Studio 2024.2.1.11
+
+### To maps works
+
+app/src/main/AndroidManifest.xml
+
+Create a key on google cloud and insert at line 34
