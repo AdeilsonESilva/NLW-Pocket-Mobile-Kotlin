@@ -28,3 +28,7 @@ Create a key on google cloud and insert at line 34
 ## Github Rocketseat
 
 [Link](https://github.com/rocketseat-education/nlw-pocket-mobile-kotlin)
+
+## Notion
+
+[Link](https://docs-rocketseat.notion.site/Kotlin-Android-149395da57708123b813e9cf3608bfd5#1643d4c5bb9049098821e0c4624ba3e4)
