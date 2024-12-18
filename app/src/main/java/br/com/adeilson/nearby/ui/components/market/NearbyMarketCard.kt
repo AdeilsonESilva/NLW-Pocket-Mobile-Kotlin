@@ -36,6 +36,7 @@ import br.com.adeilson.nearby.ui.theme.Gray400
 import br.com.adeilson.nearby.ui.theme.Gray500
 import br.com.adeilson.nearby.ui.theme.RedBase
 import br.com.adeilson.nearby.ui.theme.Typography
+import coil3.compose.AsyncImage
 
 @Composable
 fun NearbyMarketCard(modifier: Modifier = Modifier, market: Market, onClick: (Market) -> Unit) {
@@ -52,16 +53,28 @@ fun NearbyMarketCard(modifier: Modifier = Modifier, market: Market, onClick: (Ma
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-            Image(
+//            Image local mock
+//            Image(
+//                modifier = Modifier
+//                    .clip(RoundedCornerShape((12.dp)))
+//                    .fillMaxWidth(0.3f)
+//                    .height(IntrinsicSize.Min)
+//                    .aspectRatio(ratio = 1f, matchHeightConstraintsFirst = true),
+//                contentScale = ContentScale.Crop,
+//                painter = painterResource(R.drawable.img_burger), // TODO: Substituir pela imagem do estabelecimento
+//                contentDescription = "Imagem do Estabelecimento"
+//            )
+            AsyncImage(
                 modifier = Modifier
                     .clip(RoundedCornerShape((12.dp)))
                     .fillMaxWidth(0.3f)
                     .height(IntrinsicSize.Min)
                     .aspectRatio(ratio = 1f, matchHeightConstraintsFirst = true),
                 contentScale = ContentScale.Crop,
-                painter = painterResource(R.drawable.img_burger), // TODO: Substituir pela imagem do estabelecimento
+                model = market.cover,
                 contentDescription = "Imagem do Estabelecimento"
             )
+
             Column {
                 Text(text = market.name, style = Typography.headlineSmall.copy(fontSize = 14.sp))
                 Spacer(modifier = Modifier.height(8.dp))
@@ -102,7 +115,7 @@ private fun NearbyMarketCardPreview() {
             name = "Item 1",
             description = "Teste de descrição para o item 1, Teste de descrição para o item 1, Teste de descrição para o item 1, Teste de descrição para o item 1, Teste de descrição para o item 1, Teste de descrição para o item 1, Teste de descrição para o item 1, ",
             coupons = 1,
-            rules = emptyList(),
+//            rules = emptyList(),
             latitude = 0.0,
             longitude = 0.0,
             address = "Rua Teste, 123",
